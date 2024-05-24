@@ -198,6 +198,7 @@ public class SellerDAOJDBC implements SellerDAO {
             statement.setInt(1, department.getId());
 
             result = statement.executeQuery();
+
             if(!result.next()){
                 return null;
             }
