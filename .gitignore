@@ -1,3 +1,4 @@
+:diffg RE<<<<<<< HEAD
 <<<<<<< HEAD
 ### IntelliJ IDEA ###
 out/
@@ -29,6 +30,8 @@ bin/
 ### Mac OS ###
 .DS_Store
 =======
+=======
+>>>>>>> 0d8cc6ce2e6659aa6a7b1711ae120167d379cd1c
 # Compiled class file
 *.class
 
@@ -53,4 +56,7 @@ bin/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+<<<<<<< HEAD
+>>>>>>> 0d8cc6ce2e6659aa6a7b1711ae120167d379cd1c
+=======
 >>>>>>> 0d8cc6ce2e6659aa6a7b1711ae120167d379cd1c
