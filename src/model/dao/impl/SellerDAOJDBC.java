@@ -58,8 +58,27 @@ public class SellerDAOJDBC implements SellerDAO {
     }
 
     @Override
-    public void update(Seller department) {
-        // TODO document why this method is empty
+    public void update(Seller seller) {
+        PreparedStatement statement = null;
+        try{
+            statement = connection.prepareStatement("UPDATE seller " +
+                            "SET Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ? " +
+                            "WHERE Id = ?"
+            );
+
+            statement.setString(1, seller.getName());
+            statement.setString(2, seller.getName());
+            statement.setDate(3, new Date(seller.getBirthDate().getTime()));
+            statement.setDouble(4, seller.getBaseSalary());
+            statement.setInt(5, seller.getDepartment().getId());
+            statement.setInt(6, seller.getId());
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            throw new DBException(e.getMessage());
+        } finally {
+            DB.closeStatement(statement);
+        }
     }
 
     @Override
