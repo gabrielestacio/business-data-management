@@ -159,9 +159,6 @@ public class SellerDAOJDBC implements SellerDAO {
             );
 
             result = statement.executeQuery();
-            if(!result.next()){
-                return null;
-            }
 
             List<Seller> sellers = new ArrayList<>();
             Map<Integer, Department> map = new HashMap<>();
@@ -198,10 +195,6 @@ public class SellerDAOJDBC implements SellerDAO {
             statement.setInt(1, department.getId());
 
             result = statement.executeQuery();
-
-            if(!result.next()){
-                return null;
-            }
 
             List<Seller> sellers = new ArrayList<>();
             Map<Integer, Department> map = new HashMap<>();

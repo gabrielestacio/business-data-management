@@ -132,9 +132,6 @@ public class DepartmentDAOJDBC implements DepartmentDAO {
             );
 
             result = statement.executeQuery();
-            if(!result.next()){
-                return null;
-            }
 
             List<Department> departments = new ArrayList<>();
 
